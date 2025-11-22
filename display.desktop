@@ -1,0 +1,4 @@
+[Desktop Entry]
+# In /etc/xdg/autostart/display.desktop
+Name=vlc
+Exec=bash /home/pi/mimmo/script.sh
