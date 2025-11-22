@@ -86,19 +86,19 @@ I tried to document the files as much as possible. CHANGES HAVE TO BE MADE
 
 ## Potentially asked questions
 
-_**How do you turn off the Pi?**_
+_**How do you turn off the Pi?**_<br>
 By pulling the power cord. To prevent damage or corruption I configured the OverlayFS found in the `raspi-config`.
 
-_**Why store the media on a USB and not on the MicroSD card?**_
+_**Why store the media on a USB and not on the MicroSD card?**_<br>
 After setting up the Pi correctly I enable the OverlayFS and read-only mode for the MicroSD card. This way if you pull the Pi out of the power socket it won't damage or corrupt the SD card. I format the USB stick as ext4 because it's also better against sudden power outages.
 
-_**Why format the USB as ext4? Why not NTFS or something else?**_
+_**Why format the USB as ext4? Why not NTFS or something else?**_<br>
 Initially I had it as NTFS, but it was not advised for power outages, and because Linux handles ext4 better.
 
-_**Why save the media locally?**_
+_**Why save the media locally?**_<br>
 Why save the media locally? Can't you just show the slideshow by mounting the remote folder and using that? In theory *yes*, but I prefer saving the media locally so that it does not have to download the media everytime they use it, and in this case even without internet, the Pi will be able to show the slideshow
 
-_**How do I order the slideshow in descending order?**_
+_**How do I order the slideshow in descending order?**_<br>
 In the `web/upload.php` I use a "reverse timestamp" ordering method, where I save the file with a prefix like this: `timestamp of 2100-01-01 - current timestamp). This way in an ascending-order, the last uploaded file will be at the top.
 
 ## Customizations
